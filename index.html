@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Sistema de Reserva</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sistema de Reserva</h1>
+
+        <!-- abre o campo para inserir o nome -->
+        <div>
+            <label for="nomePessoa">Seu Nome:</label>
+            <input type="text" id="nomePessoa">
+        </div>
+        <!-- abre o calendário para seleção da data -->
+        <div>
+            <label for="selecioneData">Selecione a data:</label>
+            <input type="date" id="selecioneData">
+        </div>
+        <!-- seleção do local -->
+        <div>
+            <label for="local">Selecione o local:</label>
+            <select id="local">
+            </select>
+            <button onclick="reservarEspaco()">Reservar</button>
+        </div>
+        <div>
+            <h2>Reservas Agendadas</h2>
+            <div class="painel">
+                <table id="reservasTable">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Nome</th>
+                            <th>Local</th>
+                            <th>Remover</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
