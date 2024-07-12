@@ -5,39 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Sistema de Reserva</title>
+    <title>Tabela de preços de veículos</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Sistema de Reserva</h1>
+        <h1>Lista de Veículos</h1>
 
-        <!-- abre o campo para inserir o nome -->
+        <!-- abre o campo para inserir a marca do veículo -->
         <div>
-            <label for="nomePessoa">Seu Nome:</label>
-            <input type="text" id="nomePessoa">
-        </div>
-        <!-- abre o calendário para seleção da data -->
-        <div>
-            <label for="selecioneData">Selecione a data:</label>
-            <input type="date" id="selecioneData">
-        </div>
-        <!-- seleção do local -->
-        <div>
-            <label for="local">Selecione o local:</label>
-            <select id="local">
+            <label for="marca">Selecione a marca:</label>
+            <select type="text" id="marca" onchange="getModelos()">
             </select>
-            <button onclick="reservarEspaco()">Reservar</button>
         </div>
+        <!-- abre a opção para seleção do modelo do veículo -->
         <div>
-            <h2>Reservas Agendadas</h2>
+            <label for="modelo">Selecione o modelo:</label>
+            <select type="text" id="modelo" onchange="getAno()">
+            </select>
+        </div>
+
+        <div>
+            <!-- abre o campo para inserir o ano do veículo -->
+            <div>
+                <label for="ano">Ano:</label>
+                <select type="text" id="ano">
+                </select>
+
+            </div>
+            <!-- faz a busca de acordo com a seleçao -->
+            <button onclick="getBusca()">Inserir Veículo</button>
+        </div>
+        <!-- Abre a janela de edição do veículo-->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar Veículo</h2>
+                <label for="editMarca">Marca:</label>
+                <select id="editMarca" onchange="getModelosEdit()"></select><br><br>
+                <label for="editModelo">Modelo:</label>
+                <select id="editModelo" onchange="getAnoEdit()"></select><br><br>
+                <label for="editAno">Ano:</label>
+                <select id="editAno"></select><br><br>
+                <button onclick="saveChanges()">Salvar</button>
+            </div>
+        </div>
+
+        <div>
+            <h2>Veículos Disponíveis</h2>
             <div class="painel">
-                <table id="reservasTable">
+                <table id="veiculosTable">
                     <thead>
                         <tr>
-                            <th>Data</th>
-                            <th>Nome</th>
-                            <th>Local</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Ano</th>
+                            <th>Valor</th>
+                            <th>Código Fipe</th>
+                            <th>Editar</th>
                             <th>Remover</th>
                         </tr>
                     </thead>

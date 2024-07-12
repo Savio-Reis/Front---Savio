@@ -1,13 +1,12 @@
 # Meu HTML/JS
 
-Este pequeno projeto faz parte da Disciplina **Desenvolvimento Full Stack Básico** 
-O objetivo aqui é criar um gerenciador de reservas utlizando nome, data e local.
+O objetivo aqui é criar um sistema de cadastro de veículos utilizando uma API externa com a informação de valor do veículo de acordo com a tabela fipe e salvando as informaçoes no banco de dados.
 
 ## Como executar 
 
 Abra o arquivo index.html em um navegador da web.
-Preencha seu nome no campo "Seu Nome".
-Selecione a data desejada no campo "Selecione a data" de acordo com a instrução descrita na mensagem.
-Escolha o local desejado no campo "Selecione o local", seguindo as 3 opções .
-Clique no botão "Reservar" para confirmar a reserva.
-A tabela "Reservas Agendadas" será atualizada com as reservas agendadas.
+Selecione a (marca) desejada na janela de seleção de acordo com a instrução descrita na mensagem.
+Selecione o (modelo) desejado na janela de seleção de acordo com a instrução descrita na mensagem.
+Selecione o (ano) desejado na janela de seleção de acordo com a instrução descrita na mensagem.
+Clique no botão "Inserir Veículo" para confirmar.
+A tabela "Veículos Disponíveis" será atualizada com os veículos.

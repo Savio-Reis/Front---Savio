@@ -1,0 +1,8 @@
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/:ro
+      - ./code:/var/www/html
+    ports:
+      - 80:80
